@@ -1,0 +1,272 @@
+/*SELETOR UNIVERSAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*SELETOR HTML*/
+:root {
+  --bg-base-blue: #065E7C;
+  --bg-base-white: #ffffff;
+  --color-base-black: #121214;
+  --color-base-black-700: #202024;
+  --color-base-white-600: #ffffff;
+
+  --font-family-mulish: 'Mulish', sans-serif;
+
+  font-size: 62.5%;
+}
+
+/*PAGINA*/
+.page {
+  width: 430px;
+  max-height:  1945px;
+  margin: 0 auto;
+
+  font-family: var(--font-family-mulish);
+}
+
+/*CABEÇALHO*/
+header {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  font-weight: 600;
+  color: var(--color-base-white-600);
+
+  height: 7.2rem;
+
+  padding: 1.2rem 2.8rem;
+
+  background-color: var(--bg-base-blue);
+}
+
+header .logo {
+  padding: .4rem .1rem;
+  margin-right: 2.5rem;
+}
+
+.input-wrapper label  {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 24.1rem;
+  padding: 1.2rem 1.6rem;
+  margin-right: 2.5rem;
+
+  background-color: rgba(255, 255, 255, 0.466);
+  border: none;
+  border-radius: .4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  color: black;
+  outline: none;
+}
+
+.input-wrapper input::placeholder {
+  opacity: 0.56rem;
+  color: rgba(255, 255, 255, 0.801);
+  font-weight: 600;
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+
+  object-fit: cover; 
+  border-radius: 50%; 
+  }
+
+  .gato1 {
+    object-fit: contain; 
+    border-radius: 5px;
+    background-color: var(--bg-base-blue);
+
+    margin-bottom: 3.1rem;
+  }
+
+  /*CORPO*/
+  main h1 {
+    color: var(--color-base-black);
+    font-family: Mulish;
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    padding-bottom: .8rem;
+  }
+
+  main .cat1 {
+    display: none;
+  }
+
+  .gostei {
+    border: none;
+    object-fit: cover;
+
+    background-color: #ffffff;
+    margin-bottom: 3.1rem;
+  }
+
+  .gostei:hover{
+    background-color: #ffffffd5;
+    transform: scale(0.9);
+  }
+
+  .buttons{
+    display:flex;
+    gap: 1rem;
+  }
+
+  main p {
+    color: var(--color-base-black);
+    font-family: var(--font-family-mulish);
+    font-size: 1.7rem;
+    text-align: left;
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+  aside h1 {
+    padding-top: 3.4rem;
+    padding-bottom: 3.2rem;
+    color: var(--color-base-black-700);
+    font-family: var(--font-family-mulish);
+  
+    font-size: 2.4rem;
+  
+    font-weight: 700;
+    line-height: 160%;
+  }
+
+  aside {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 3.2rem 2rem 3.2rem;
+  }
+
+  .cat {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+
+  .cat h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-base-black-700);
+    font-family: var(--font-family-mulish);
+    line-height: 160%;
+  }
+  
+  .cat p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--color-base-black);
+    font-family: var(--font-family-mulish);
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+/*RODAPÉ*/
+  footer {
+    background-color: var(--bg-base-blue);
+    display: flex;
+    text-align: center;
+    padding: 1.6rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 1.6rem;
+  }
+
+  /*DESKTOP*/
+  @media(min-width: 1024px){
+
+    /*PAGINA*/
+    .page {
+      margin: 0 10rem;
+      width: 120rem;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-areas: 
+      "header header header"
+      "main main section"
+      "footer footer footer";
+    }
+    /*CABEÇALHO*/
+    header {
+      grid-area: header;
+    }
+
+    header form {
+      width: 120rem;
+    }
+
+    .input-wrapper input {
+      margin-left: auto;
+      padding: 1.2rem 100rem 1.2rem 0;
+
+      color: black;
+    }
+
+    /*CORPO*/
+    main {
+      grid-area: main;
+      width: 80rem;
+      
+      text-align: justify;
+      font-size: 1.6rem;
+      
+      font-weight: 400;
+      line-height: 160%;
+
+      margin-bottom: 3.9rem;
+    }
+
+    main .cat1 {
+      margin: 4.4rem 3.4rem 3.2rem 0;
+      width: 80rem;
+      height: 40rem;
+      border-radius: 5px;
+      object-fit: cover;
+      display: block;
+
+    }
+
+    main .title-buttons{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    section {
+      grid-area: section;
+      height: 60rem;
+      width: 39rem;
+    }
+
+    /*RODAPÉ*/
+    footer {
+      grid-area: footer;
+    }
+
+    .gato1 {
+      display: none;
+    }
+  }
