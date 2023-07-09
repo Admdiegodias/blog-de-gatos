@@ -255,6 +255,10 @@ header .logo {
       width: 39rem;
     }
 
+      aside h1{
+      padding-top: .5rem;
+    }
+
     /*RODAPÉ*/
     footer {
       grid-area: footer;
