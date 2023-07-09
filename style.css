@@ -58,7 +58,7 @@ header .logo {
 }
 
 .input-wrapper input {
-  width: 24.1rem;
+  width: 100%;
   padding: 1.2rem 1.6rem;
   margin-right: 2.5rem;
 
@@ -79,6 +79,7 @@ header .logo {
 }
 
 .avatar {
+  margin-left: 2rem;
   width: 4.2rem;
   height: 4.2rem;
 
@@ -216,13 +217,6 @@ header .logo {
 
     header form {
       width: 120rem;
-    }
-
-    .input-wrapper input {
-      margin-left: auto;
-      padding: 1.2rem 100rem 1.2rem 0;
-
-      color: black;
     }
 
     /*CORPO*/
